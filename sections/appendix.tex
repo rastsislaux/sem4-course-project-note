@@ -1,0 +1,87 @@
+\appendix
+\intro{А}{обязательное}{Пример формализации ранобе в базе знаний интеллектуальной справочной системы по библиографии}
+
+\begin{SCn}
+    \scnheader{<<Класс превосходства>>}
+    \begin{scnrelfromlist}{основной идентификатор}
+        \scnfileitem{<<Класс превосходства>>}
+        \begin{scnindent}
+            \scniselement{русский язык}
+        \end{scnindent}
+        \scnfileitem{<<Classroom of the Elite>>}
+        \begin{scnindent}
+            \scniselement{английский язык}
+        \end{scnindent}
+    \end{scnrelfromlist}
+
+    \scnrelfrom{автор}{Сёго Кинугаса}
+    \scnrelfrom{иллюстратор}{Шунсаку Томосэ}
+    \scnrelfrom{язык оригинала}{Японский язык}
+
+    \begin{scnreltoset}{персонажи произведения}
+        \scnitem{Киётака Аянокоджи}
+        \scnitem{Сузуна Хорикита}
+        \scnitem{Кей Каруизава}
+        \scnitem{Арису Сакаянаги}
+        \scnitem{Хонами Ичиносе}
+        \scnitem{Айри Сакура}
+        \scnitem{Какеру Рюэн}
+        \scnitem{Саэ Чабашира}
+        \scnitem{Кикё Кушида}
+        \scnitem{Рокусуке Коэнджи}
+    \end{scnreltoset}
+
+    \begin{scniselementrolelist}{ключевой sc-элемент}
+        \scnitem{Раздел. Ранобе}
+        \scnitem{Описание (Класс превосходства)}
+        \scnitem{Обложка (Класс превосходства)}
+    \end{scniselementrolelist}    
+    
+    \scniselement{книга}
+    \scniselement{ранобе}
+    \scniselement{психологическое}
+    \scniselement{триллер}
+    \scniselement{школа (жанр)}
+\end{SCn}
+
+%\begin{verbatim}
+%ranobe_classroom_of_the_elite 
+%=> nrel_main_idtf:
+%    ["Класс превосходства"] (* <- lang_ru;; *);
+%<- book;
+%<- concept_ranobe;
+%<- genre_psychological;
+%=> nrel_author: person_Shogo_Kinugasa;
+%=> nrel_illustrator: person_Shunsaku_Tomose;
+%=> nrel_original_language: lang_jp;
+%=> nrel_publication_date: year_2015;
+%<- rrel_key_sc_element: ...
+%    (*
+%        => nrel_main_idtf: [Описание (Класс превосходства)]
+%            (* <-lang_ru;; *);;
+%        <= nrel_sc_text_translation: ...
+%            (* -> "file://content/description.html"
+%                (* <-lang_ru;; => nrel_format: format_html;; *);;
+%           *);;
+%    *);
+%<= nrel_sc_text_translation: ...
+%    (* -> "file://images/cover.jpg"
+%        (* => nrel_format: format_jpg;; <- lang_ru;; *);;
+%    *);
+%<= nrel_characters:
+ %   ...
+ %   (*
+  %      -> rrel_main_character:
+  %              char_Kiyotaka_Ayanokouji;;
+  %      -> char_Suzuna_Horikita;
+  %         char_Kei_Karuizawa;
+  %         char_Arisu_Sakayanagi;
+  %         char_Honami_Ichinose;
+  %         char_Airi_Sakura;
+  %         char_Kakeru_Ryuuen;
+   % *);;
+%\end{verbatim}
+%\appendix
+
+%\intro{B}{справочное}{Пример оформления}
+%Текст приложения.
